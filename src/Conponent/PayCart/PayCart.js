@@ -8,7 +8,7 @@ export const Mainstyled = styled.div`
   margin: 0 auto;
 `;
 
-export const Image = styled.div`
+export const Image = styled.img`
   width: 200px;
   height: 200px;
   border: 1px solid red;
@@ -21,13 +21,13 @@ export const Conperfum = styled.div`
   display: flex;
 `;
 
-export default function PayCart() {
+export default function PayCart(props) {
   return (
     <Mainstyled>
       <Conperfum>
-        <Image />
-        <h1>Title</h1>
-        <p>price</p>
+        <Image src ={props.url} />
+        <h1> {props.title}</h1>
+        <p>{props.price}</p>
       </Conperfum>
     </Mainstyled>
   );
